@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://x.git
     targetRevision: HEAD
-    path: applications/nginx/kubernetes
+    path: applications/nginx/templates
   destination:
     server: https://kubernetes.default.svc
     namespace: apps
