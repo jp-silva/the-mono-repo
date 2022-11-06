@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://x.git
+    repoURL: https://git@github.com:jp-silva/the-mono-repo.git
     targetRevision: HEAD
     path: applications/nginx/templates
   destination:
