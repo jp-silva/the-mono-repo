@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://git@github.com:jp-silva/the-mono-repo.git
+    repoURL: https://github.com/jp-silva/the-mono-repo.git
     targetRevision: HEAD
     path: applications/nginx/templates
   destination:
-    server: https://kubernetes.default.svc
+    server: "https://kubernetes.default.svc"
     namespace: apps
   syncPolicy:
     syncOptions:
