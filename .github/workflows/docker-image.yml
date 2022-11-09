@@ -14,5 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        context: ./applications/spring-native-test/
     - name: Build the Docker image
-      run: docker build . --file applications/spring-native-test/Dockerfile --tag jpsilva/spring-native-test:$(date +%s)
+      run: docker build . --file Dockerfile --tag jpsilva/spring-native-test:$(date +%s)
