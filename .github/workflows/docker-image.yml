@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: spring-native-test
+  IMAGE_NAME: ${{ github.actor }}/spring-native-test
 
 jobs:
   build-and-push-image:
