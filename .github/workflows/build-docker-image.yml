@@ -49,6 +49,7 @@ jobs:
           propertyPath: 'image.tag'
           value: ${{ steps.meta.outputs.tags }}
           branch: deployment/${{ steps.meta.outputs.tags }}
+          masterBranchName: main
           targetBranch: main
           createPR: true
           message: 'Update Image Version to ${{ steps.meta.outputs.tags }}'
