@@ -47,9 +47,9 @@ jobs:
         with:
           valueFile: '${{ env.APP_DIR }}/helm/springnativetest/values.yaml'
           propertyPath: 'image.tag'
-          value: ${{ steps.meta.outputs.tags }}
-          branch: deployment/${{ steps.meta.outputs.tags }}
+          value: ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
+          branch: deployment/${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
           masterBranchName: main
           targetBranch: main
           createPR: true
-          message: 'Update Image Version to ${{ steps.meta.outputs.tags }}'
+          message: "Update Image Version to ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}"
