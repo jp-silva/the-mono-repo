@@ -53,3 +53,4 @@ jobs:
           targetBranch: main
           createPR: true
           message: "Update Image Version to ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}"
+
