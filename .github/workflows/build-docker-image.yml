@@ -8,6 +8,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.actor }}/spring-native-test
+  APP_DIR: applications/spring-native-test/
 
 jobs:
   build-and-push-image:
@@ -36,7 +37,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
         with:
-          context: applications/spring-native-test/
+          context: ${{ env.APP_DIR }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
@@ -44,7 +45,7 @@ jobs:
       - name: Update Image Version in the related HelmChart values.yaml
         uses: fjogeleit/yaml-update-action@main
         with:
-          valueFile: 'helm/values.yaml'
+          valueFile: '${{ env.APP_DIR }}/helm/values.yaml'
           propertyPath: 'image.tag'
           value: ${{ steps.meta.outputs.tags }}
           branch: deployment/${{ steps.meta.outputs.tags }}
