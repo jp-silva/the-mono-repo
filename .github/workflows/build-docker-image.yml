@@ -51,9 +51,7 @@ jobs:
           branch: deployment/${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
           masterBranchName: main
           targetBranch: main
-          updateFile: true
-          createPR: false
-          token: ${{ secrets.GITHUB_TOKEN }}
+          createPR: true
           message: "Update Image Version to ${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}"
 
 
