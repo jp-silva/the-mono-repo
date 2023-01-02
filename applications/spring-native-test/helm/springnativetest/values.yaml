@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/jpsilva/spring-native-test
   pullPolicy: IfNotPresent
-  tag: v0.0.24
+  tag: v0.0.25
 imagePullSecrets: []
 nameOverride: springnativetest
 fullnameOverride: springnativetest
