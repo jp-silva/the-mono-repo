@@ -3,7 +3,8 @@ image:
   repository: ghcr.io/jpsilva/spring-native-test
   pullPolicy: IfNotPresent
   tag: v0.0.25
-imagePullSecrets: []
+imagePullSecrets:
+  - name: dockerconfigjson-github-com
 nameOverride: springnativetest
 fullnameOverride: springnativetest
 serviceAccount:
