@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: ghcr.io/jpsilva/spring-native-test
+  repository: ghcr.io/jp-silva/spring-native-test
   pullPolicy: IfNotPresent
   tag: v0.0.26
 imagePullSecrets:

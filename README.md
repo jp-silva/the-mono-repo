@@ -18,6 +18,13 @@
 
 # create a secret with a github token that can access the package registry
 # then seal and apply that sealed secret
-kubeseal <argocd/setup/githubsecret.yaml >argocd/setup/githubsealedsecret.json
-kubectl create -f argocd/setup/githubsealedsecret.json -n apps
+- kubectl create secret docker-registry dockerconfigjson-github-com \                                           130 ↵
+--dry-run=client \
+--docker-server=https://docker.pkg.github.com \
+--docker-username=<username> \
+--docker-password=<https://github.com/settings/tokens/new\> \
+-o yaml > argocd/setup/githubsecret.yaml
+
+- kubeseal <argocd/setup/githubsecret.yaml >argocd/setup/githubsealedsecret.json
+- kubectl create -f argocd/setup/githubsealedsecret.json -n apps
 
