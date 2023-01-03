@@ -1,4 +1,5 @@
 **do-not-save.txt
+github-secret.yaml
 
 # Created by https://www.toptal.com/developers/gitignore/api/terraform,helm,intellij+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=terraform,helm,intellij+all

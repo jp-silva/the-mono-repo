@@ -18,6 +18,6 @@
 
 # create a secret with a github token that can access the package registry
 # then seal and apply that sealed secret
-kubeseal <secrets.yaml >mysealedsecret.json
-kubectl create -f argocd/setup/mysealedsecret.json -n apps
+kubeseal <argocd/setup/githubsecret.yaml >argocd/setup/githubsealedsecret.json
+kubectl create -f argocd/setup/githubsealedsecret.json -n apps
 
