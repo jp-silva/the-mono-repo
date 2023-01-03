@@ -1,5 +1,6 @@
 - podman machine init --cpus 2 --memory 2048 --rootful
 - podman machine start
+- minikube addons enable metrics-server
 - minikube start --driver=podman
 
 # install ArgoCD in k8s
