@@ -108,5 +108,10 @@ catalog:
       rules:
         - allow: [User, Group]
 
+    - type: url
+      target: https://github.com/jp-silva/the-mono-repo/blob/main/catalog-info.yaml
+      rules:
+        - allow: [User, Group]
+
 #    - type: file
 #      target: ../../examples/catalog-info.yaml
