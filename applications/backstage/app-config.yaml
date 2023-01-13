@@ -104,7 +104,7 @@ catalog:
 #        - allow: [User, Group]
 #
     - type: url
-      target: https://github.com/jp-silva/the-mono-repo/blob/main/applications/spring-native-test/docs/catalog-info.yaml
+      target: https://github.com/jp-silva/the-mono-repo/blob/main/backstage/catalog-info.yaml
       rules:
         - allow: [User, Group]
 
