@@ -33,34 +33,8 @@ metadata:
       type: admin-dashboard
   providesApis:
     - spring-test-api
-
 spec:
   type: service
   lifecycle: experimental
   owner: backend-1
   system: public-websites
----
-# TEAM
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: backend-1
-spec:
-  type: team
-  children: [ ]
----
-# USER
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: pedro.silva
-spec:
-  memberOf: [ backend-1 ]
----
-# USER
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: joao.antonio
-spec:
-  memberOf: [ backend-1 ]
