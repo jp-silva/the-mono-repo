@@ -1,0 +1,33 @@
+# COMPONENT
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: spring-native-test
+  links:
+    - url: https://admin.qa.example-org.com
+      title: qa url
+      icon: dashboard
+      type: admin-dashboard
+    - url: https://admin.staging.example-org.com
+      title: staging url
+      icon: dashboard
+      type: admin-dashboard
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+  system: experimental-portal
+  providesApis:
+    - stephendemo16
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: stephendemo16
+  description: try using template
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: guests
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/dab6854d4d599aafb0eb36e6c7ae1fe0c37509b7/APIs/spotify.com/2021.4.2/openapi.yaml

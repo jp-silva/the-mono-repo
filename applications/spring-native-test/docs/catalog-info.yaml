@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: guests
+  owner: backend-1
   definition:
     $text: https://github.com/APIs-guru/openapi-directory/blob/dab6854d4d599aafb0eb36e6c7ae1fe0c37509b7/APIs/spotify.com/2021.4.2/openapi.yaml
 ---
@@ -31,9 +31,35 @@ metadata:
       title: staging url
       icon: dashboard
       type: admin-dashboard
-  providesApis:
-    - spring-test-api
 spec:
   type: service
   lifecycle: experimental
-  owner: guests
+  owner: backend-1
+  system: public-websites
+  providesApis:
+    - spring-test-api
+---
+# TEAM
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: backend-1
+spec:
+  type: team
+  children: [ ]
+---
+# USER
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: pedro.silva
+spec:
+  memberOf: [ backend-1 ]
+---
+# USER
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: joao.antonio
+spec:
+  memberOf: [ backend-1 ]

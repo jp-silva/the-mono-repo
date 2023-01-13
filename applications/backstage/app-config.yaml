@@ -107,3 +107,6 @@ catalog:
 #      target: https://github.com/jp-silva/the-mono-repo/blob/main/applications/spring-native-test/docs/catalog-info.yaml
 #      rules:
 #        - allow: [User, Group]
+
+    - type: file
+      target: ../../examples/catalog-info.yaml
