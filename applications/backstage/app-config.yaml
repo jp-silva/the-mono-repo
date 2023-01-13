@@ -112,4 +112,4 @@ catalog:
     - type: url
       target: https://github.com/jp-silva/the-mono-repo/blob/main/applications/spring-native-test/docs/backstage.yaml
       rules:
-        - allow: [User, Group]
+        - allow: [User, Group, Component, API]
