@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: spring-native-test-catalog-location
+  description: THIS IS THE DESCRIPTION
+spec:
+  targets:
+    - ./catalog-info.yaml

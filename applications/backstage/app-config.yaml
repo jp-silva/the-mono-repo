@@ -87,6 +87,12 @@ catalog:
       rules:
         - allow: [Template]
 
+    # Local example template
+#    - type: file
+#      target: ../../examples/x.yaml
+#      rules:
+#        - allow: [User, Group]
+
     # Local example organizational data
 #    - type: file
 #      target: ../../examples/org.yaml
@@ -104,4 +110,6 @@ catalog:
 #        - allow: [User, Group]
 
     - type: url
-      target: https://raw.githubusercontent.com/jp-silva/the-mono-repo/main/applications/spring-native-test/docs/catalog-info.yaml
+      target: https://github.com/jp-silva/the-mono-repo/blob/main/applications/spring-native-test/docs/catalog-info.yaml
+      rules:
+        - allow: [User, Group]
