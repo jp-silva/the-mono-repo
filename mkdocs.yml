@@ -1,5 +1,6 @@
 site_name: 'example-docs'
 nav:
   - Home: index.md
+docs_dir: 'applications/spring-native-test/docs'
 plugins:
   - techdocs-core
