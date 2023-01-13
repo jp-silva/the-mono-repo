@@ -16,10 +16,8 @@ kind: Component
 metadata:
   name: spring-native-test
   description: A spring native test application
-  labels:
-    example.com/custom: custom_label_value
   annotations:
-    example.com/service-discovery: springnativetest
+    backstage.io/techdocs-ref: dir:.
   tags:
     - java
   links:
