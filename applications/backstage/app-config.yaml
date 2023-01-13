@@ -82,16 +82,10 @@ catalog:
 #      target: ../../examples/entities.yaml
 
     # Local example template
-    - type: file
-      target: ../../examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
-    # Local example template
 #    - type: file
-#      target: ../../examples/x.yaml
+#      target: ../../examples/template/template.yaml
 #      rules:
-#        - allow: [User, Group]
+#        - allow: [Template]
 
     # Local example organizational data
 #    - type: file
@@ -103,13 +97,13 @@ catalog:
 #    - type: url
 #      target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/all.yaml
 
-    ## Uncomment these lines to add an example org
+    # Uncomment these lines to add an example org
 #    - type: url
 #      target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
 #      rules:
 #        - allow: [User, Group]
-
+#
     - type: url
       target: https://github.com/jp-silva/the-mono-repo/blob/main/applications/spring-native-test/docs/catalog-info.yaml
       rules:
-        - allow: [User, Group, Component, API]
+        - allow: [User, Group]

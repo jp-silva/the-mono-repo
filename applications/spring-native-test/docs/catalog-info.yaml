@@ -19,6 +19,9 @@ metadata:
       title: staging url
       icon: dashboard
       type: admin-dashboard
+  providesApis:
+    - spring-test-api
+
 spec:
   type: service
   lifecycle: experimental
