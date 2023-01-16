@@ -1,4 +1,6 @@
 site_name: 'Example Documentation'
+repo_url: https://github.com/jp-silva/the-mono-repo
+edit_uri: edit/main/docs
 
 nav:
   - Home: index.md
